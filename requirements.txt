@@ -1,0 +1,14 @@
+#your package
+ipykernel
+matplotlib
+seaborn
+numpy
+pandas
+scikit-learn
+notebook
+jupyterlab
+requests
+bs4
+selenium
+webdriver_manager
+tqdm
