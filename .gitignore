@@ -2,10 +2,11 @@
 .DS_Store
 .ipynb_checkpoints
 *.pyc
+.gitignore
 
 
 # Data files
 *.csv
 *.sqlite
 *.zip
-*.txt
+/data
