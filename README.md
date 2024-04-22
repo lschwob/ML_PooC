@@ -27,3 +27,7 @@ Provide step-by-step instructions on how to get a development environment runnin
 git clone https://github.com/username/projectname.git
 cd projectname
 pip install -r requirements.txt
+
+
+## Drive Folder :
+https://drive.google.com/drive/folders/1jBxBjaKs8gJVh0EJ15seDMgjDhoDkbpm?usp=sharing
