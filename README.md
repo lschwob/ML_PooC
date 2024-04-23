@@ -46,12 +46,6 @@ To improve our project, we could try to increase the number of quotations making
 
 
 
-
-## Features
-- Feature 1: Describe the feature and its benefit.
-- Feature 2: Highlight another feature and why it's useful
-- Feature 3: If applicable, describe another key aspect of the project.
-
 ## Installation
 Provide step-by-step instructions on how to get a development environment running.
 
@@ -60,6 +54,13 @@ git clone https://github.com/username/projectname.git
 cd projectname
 pip install -r requirements.txt
 
+```
 
-## Drive Folder :
+## Usage
+The notebook to run is `working_notebook.ipynb`. It contains all the code necessary to run the project.
+You should automatically run all the cells in the notebook to get the results.
+
+
+### Drive Folder :
 https://drive.google.com/drive/folders/1jBxBjaKs8gJVh0EJ15seDMgjDhoDkbpm?usp=sharing
+
