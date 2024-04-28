@@ -119,7 +119,7 @@ def scrape_financial(symbols, progress_file):
         
     return links
 
-def download_data(file, download_path='../../data/financials/'):
+def download_data(file, download_path='../data/financials/'):
     header = {
         'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.3'
     }
@@ -131,9 +131,10 @@ def download_data(file, download_path='../../data/financials/'):
     for symbol, url in tqdm(urls, desc='Downloading data'):
         try:
             r = requests.get(url, headers=header)
-            with open(f'{download_path}{symbol}.csv', 'wb') as f:
+            with open(f'{download_path}{symbol}.csv', 'xb') as f:
                 f.write(r.content)
-        except:
+        except Exception as e:
+            print(e)
             print(f'Error downloading {symbol}.')
         # time.sleep(5)
     return 'Files downloaded successfully.'
