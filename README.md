@@ -3,6 +3,8 @@
 ## Overview
 Through this project we want to implement an algorithmic trading technique called ‘Pairs Trading’. This technique consists of creating very similar pairs across a wide range of quotes. Once the desired number of pairs has been formed, the trading strategy then wants to sell one asset when it outperforms and buy back the second in order to make a profit.
 
+![ML POC Diagram](./data/img/ml_poc_diagram.png)
+
 ## Data collection
 - Scraping the list of S&P 500 companies: We start by obtaining the complete list of companies making up the index, which forms the basis for the following scraping steps.
 - Scraping of URLs for downloading historical share prices for these companies from YahooFinance

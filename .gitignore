@@ -9,4 +9,5 @@
 *.csv
 *.sqlite
 *.zip
-/data
+/data/*
+!/data/img
