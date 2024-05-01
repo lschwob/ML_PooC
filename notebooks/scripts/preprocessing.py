@@ -1,6 +1,6 @@
 import pandas as pd
 from tqdm import tqdm
-from scripts.models import kmeans
+from models import kmeans
 import re
 import numpy as np
 
@@ -45,9 +45,9 @@ def reshape_process(df, variable):
     data_reshape = data_reshape.drop('Date', axis=0)
     return data, data_reshape
 
-def clustering(data, data_reshape):
-    kmeans_model = kmeans(data_reshape)
-    data_reshape['Cluster'] = kmeans_model.labels_
+def clustering(data, data_reshape, model, nb_symbols):
+    ml_model = model
+    data_reshape['Cluster'] = ml_model.labels_
     dict = {}
     for cluster in data_reshape['Cluster'].unique():
         index = data_reshape[data_reshape['Cluster'] == cluster].index
@@ -55,5 +55,5 @@ def clustering(data, data_reshape):
         for i in index:
             result.append(re.search(r'_(.*)', i).group(1))
         dict[cluster] = result
-    dict = {key: value for key, value in dict.items() if len(value) in [2]}
+    dict = {key: value for key, value in dict.items() if len(value) in np.arange(2, nb_symbols+1)}
     return dict

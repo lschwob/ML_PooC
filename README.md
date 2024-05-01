@@ -56,6 +56,8 @@ git clone https://github.com/username/projectname.git
 cd projectname
 pip install -r requirements.txt
 
+streamlit run ./notebooks/scripts/streamlit.py  --client.showErrorDetails=false
+
 ```
 
 ## Usage

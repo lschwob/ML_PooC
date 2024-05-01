@@ -1,7 +1,6 @@
 from sklearn.preprocessing import StandardScaler
-from sklearn.cluster import KMeans
+from sklearn.cluster import KMeans, SpectralClustering, DBSCAN, AgglomerativeClustering
 import numpy as np
-from sklearn.cluster import DBSCAN
 
 def scaler(data):
     scaler = StandardScaler()
@@ -14,7 +13,12 @@ def kmeans(data):
     kmeans.fit(data)
     return kmeans
 
-def dbscan(data):
-    db = DBSCAN(eps=1, max_samples=2).fit(data)
-    db.fit(data)
-    return db
+def spectral_clustering(data):
+    spectral = SpectralClustering(n_clusters=250)
+    spectral.fit(data)
+    return spectral
+
+def agglomerative_clustering(data):
+    agglomerative = AgglomerativeClustering(n_clusters=250)
+    agglomerative.fit(data)
+    return agglomerative
