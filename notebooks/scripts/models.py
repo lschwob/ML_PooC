@@ -1,6 +1,7 @@
 from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 import numpy as np
+from sklearn.cluster import DBSCAN
 
 def scaler(data):
     scaler = StandardScaler()
@@ -12,3 +13,8 @@ def kmeans(data):
     kmeans = KMeans(n_clusters=250)
     kmeans.fit(data)
     return kmeans
+
+def dbscan(data):
+    db = DBSCAN(eps=1, max_samples=2).fit(data)
+    db.fit(data)
+    return db
