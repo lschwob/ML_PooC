@@ -1,6 +1,9 @@
 import pandas as pd
 from tqdm import tqdm
-from models import kmeans
+try : 
+    from models import kmeans
+except : 
+    from scripts.models import kmeans
 import re
 import numpy as np
 
